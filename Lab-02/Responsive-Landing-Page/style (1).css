@@ -1,0 +1,217 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(./thumb-1920-1338701.png);      
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.navbar {
+    padding: 10px; /* Adjusted padding for better spacing */
+    box-shadow: 1px 1px 9px black;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: turquoise;
+    font-size: 2rem; /* Adjusted for better scalability */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin: 0;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px; /* Adjusted padding for consistency */
+    text-decoration: none;
+    font-size: 1rem; /* Adjusted font size for scalability */
+}
+
+li a:hover {
+    color: teal;
+    font-weight: bold;
+}
+
+.image {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px; /* Added padding for content alignment */
+    text-align: center; /* Centered text alignment */
+}
+
+.header {
+    text-transform: capitalize;
+    color: white;
+    font-size: 4rem; /* Adjusted font size for better responsiveness */
+    text-shadow: 1px 1px 2px black;
+}
+
+.p {
+    color: white;
+    line-height: 1.5;
+    font-size: 1.2rem; /* Adjusted font size for better readability */
+    margin: 20px auto; /* Centered text and added vertical spacing */
+    max-width: 80%; /* Limited width for better readability */
+}
+
+.span {
+    color: turquoise;
+}
+
+.quote, .contact {
+    width: 150px; /* Unified width for consistency */
+    height: 50px;
+    background-color: turquoise;
+    border: 1px solid lightskyblue;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px teal;
+    margin: 10px auto; /* Centered buttons and added vertical spacing */
+    display: inline-block;
+    text-align: center;
+    line-height: 50px; /* Centered text vertically */
+}
+
+.contact {
+    background-color: turquoise;
+    border: 1px solid turquoise;
+}
+.quote:hover, .contact:hover{
+    background-color: rgba(0,0,0,.5);
+    color: teal;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.menu-toggle {
+    display: none;
+}
+
+.hambur-icon {
+    display: none;
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    font-size: 1.5rem; /* Adjusted for better visibility */
+    cursor: pointer;
+}
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: rgb(255, 255 , 255, 0.9);
+        border-bottom-right-radius: 20px 20px;
+        border-bottom-left-radius: 20px 20px;
+    }
+    .header{
+        padding-top: 20px;
+        font-size: 3rem;
+    }
+    .navbar li {
+        float: none;
+        padding-left: 20px;
+        padding-top: 5px;
+    }
+
+    .navbar li a {
+        padding: 10px;
+        text-align: left;
+        font-size: 1rem; /* Adjusted font size */
+    }
+
+    .hambur-icon {
+        display: block;
+    }
+
+    .menu-toggle:checked ~ ul {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .image {
+        height: 600px;
+    }
+
+    .header {
+        font-size: 2.5rem; /* Adjusted for smaller screens */
+    }
+
+    .p {
+        font-size: 1rem; /* Adjusted for smaller screens */
+        max-width: 90%;
+    }
+
+    .quote, .contact {
+        width: 120px; /* Adjusted button size */
+        height: 45px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .image {
+        height: 500px;
+    }
+
+    .header {
+        font-size: 2rem; /* Adjusted for even smaller screens */
+    }
+
+    .p {
+        font-size: 0.9rem; /* Adjusted for smaller screens */
+        max-width: 95%;
+    }
+
+    .quote, .contact {
+        width: 100px; /* Adjusted button size */
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .image {
+        height: 400px;
+    }
+
+    .header {
+        font-size: 1.5rem; /* Adjusted for very small screens */
+    }
+
+    .p {
+        font-size: 0.8rem; /* Adjusted for very small screens */
+        max-width: 100%;
+    }
+
+    .quote, .contact {
+        width: 90px; /* Adjusted button size */
+        height: 35px;
+    }
+}
