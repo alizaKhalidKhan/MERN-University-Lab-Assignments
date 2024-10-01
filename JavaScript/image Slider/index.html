@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #slideshow {
+            position: relative;
+            width: 100%;
+            height: 780px; /* Set height for the slideshow */
+            margin: auto;
+            overflow: hidden;
+        }
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: none; /* Hide slides by default */
+        }
+        .active {
+            display: block; /* Show the active slide */
+        }
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #prev {
+            left: 10px;
+        }
+        #next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="slideshow">
+    <div class="slide active" style="background-image: url('./CCAhHl.webp');"></div>
+    <div class="slide" style="background-image: url('./drlovl.webp');"></div>
+    <div class="slide" style="background-image: url('./RSLWNI.png');"></div>
+    <button id="prev" class="arrow">&#10094;</button> <!-- Left arrow -->
+    <button id="next" class="arrow">&#10095;</button> <!-- Right arrow -->
+</div>
+
+<script>
+    const slides = document.querySelectorAll('#slideshow .slide');
+    let currentIndex = 0;
+    
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length; // Loop back to first slide
+        showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Loop back to last slide
+        showSlide(currentIndex);
+    }
+
+    document.getElementById('next').addEventListener('click', nextSlide);
+    document.getElementById('prev').addEventListener('click', prevSlide);
+
+    // Automatically show the next slide every 3 seconds
+    setInterval(nextSlide, 3000);
+</script>
+
+</body>
+</html>
