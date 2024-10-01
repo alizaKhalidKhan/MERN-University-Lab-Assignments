@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: plum;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    background-color: white;
+    border-radius: 20px;
+    height: 300px;
+    width: 300px;
+    box-shadow: 5px 10px 20px black;
+}
+fieldset{
+    display: flex;
+    width: 200px;
+    height: 50px;
+    border-color: purple;
+}
+input, textarea{
+    width: 250px;
+    height: 30px;
+}
+textarea{
+    resize: none;
+}
+#sub{
+    width: 100px; 
+    margin-left: 90px;
+    background-color: plum;
+    color: black;
+    border-color: plum;
+    border-radius: 10px;
+}
