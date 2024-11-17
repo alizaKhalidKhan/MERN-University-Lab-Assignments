@@ -1,0 +1,60 @@
+.App {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.nav-bar{
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0,0.5);
+}
+.nav-bar ul{
+  list-style-type: none;
+}
+.nav-bar ul li{
+  display: inline;
+  padding: 10px;
+}
+.nav-bar ul li a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.nav-bar ul li a:hover{
+  color: orange
+}
+.hero{
+  background: linear-gradient(
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.8)),
+    url('https://static.vecteezy.com/system/resources/previews/033/692/783/non_2x/motorcycle-rider-rides-on-a-race-track-at-sunset-motion-blur-motorcycle-rider-on-sport-bike-rides-fast-on-race-track-at-sunset-extreme-athlete-sport-motorcycles-racing-ai-generated-free-photo.jpg');
+    background-size: cover;
+    height: 723px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-sect{
+  text-align: center!important;
+  color: white !important;}
+h1{
+  font-size: 50px !important;
+  font-weight: bold !important;
+
+}
+button{
+  padding: 20px;
+  margin-left: 600px;
+  font-weight: bold;
+  background-color: orange;
+  border-radius: 10px !important;
+  border-color: orange;
+}
+button:hover{
+  background-color: transparent;
+  border-color: orange;
+  color: white;
+}
